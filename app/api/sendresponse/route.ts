@@ -50,7 +50,7 @@ export const POST = async (req: NextRequest) => {
   } catch (error) {
     console.error('Error processing request:', error);
     return NextResponse.json(
-      { message: 'An error occurred: ' + error.message },
+      { message: 'An error occurred'},
       { status: 500 }
     );
   }
