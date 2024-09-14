@@ -64,6 +64,7 @@ const page = () => {
     const res = await axios.post('api/save', {
       email, fields
     })
+    console.log(res.data);
     setEmailed(true)
     setLoading(false)
   }

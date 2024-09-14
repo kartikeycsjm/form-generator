@@ -5,6 +5,7 @@ import { transporter } from "@/emailConfig";
 export const POST=async(req:NextRequest,res:NextResponse)=>{
     try {
         const {email,fields}=await req.json();
+        await connectDB();
         console.log(email,fields);
         if (!/.+@.+\..+/.test(email)) {
             return NextResponse.json({ message: 'Invalid email address' }, { status: 400 });
