@@ -61,7 +61,6 @@ const page = () => {
   }
   const generateForm = async () => {
     setLoading(true)
-    setSaved(false)
     const res = await axios.post('api/save', {
       email, fields
     })
