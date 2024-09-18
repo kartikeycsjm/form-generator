@@ -17,12 +17,22 @@ const page = () => {
 
   useEffect(() => {
     const storedFields = localStorage.getItem('fields');
+    
+  
     if (storedFields) {
-      setSaved(true)
-      const f = JSON.parse(storedFields);
-      setFields(f);
+      const parsedFields = JSON.parse(storedFields);
+      console.log(parsedFields);
+      if (parsedFields.length > 0) {
+        setSaved(true);
+        setFields(parsedFields);
+      } else {
+        setSaved(false);
+      }
+    } else {
+      setSaved(false);
     }
   }, []);
+  
   const addField = () => {
     setSaved(false)
     const newfield: field = {
@@ -68,6 +78,7 @@ const page = () => {
     setEmailed(true)
     setLoading(false)
   }
+  
   return (
     <div className='w-full flex items-center flex-col min-h-screen 
     bg-[#000625]'>

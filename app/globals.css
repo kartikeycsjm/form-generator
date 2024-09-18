@@ -3,13 +3,43 @@
 @tailwind utilities;
 
 
-#fields::-webkit-scrollbar{
+body::-webkit-scrollbar {
     background-color: rgba(187, 187, 190, 0.197);
-    width: 10px;
+    width: 5px;
 }
 
 
-#field::-webkit-scrollbar{
+body::-webkit-scrollbar:thumb {
     background-color: rgba(230, 230, 236, 0.197);
-    width: 10px;
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+#fields::-webkit-scrollbar {
+    background-color: rgba(187, 187, 190, 0.197);
+    width: 5px;
+}
+
+
+#fields::-webkit-scrollbar:thumb {
+    background-color: rgba(230, 230, 236, 0.197);
+    width: 5px;
+}
+
+#fields::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+#fields::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
